@@ -39,7 +39,7 @@ const Game: React.FC<GameProps> = ({ playerName, onGameEnd }) => {
       setAttacker('player');
     }
 
-    // Überprüfe, ob das Spiel vorbei ist
+
     if (playerHand.length === 1 || computerHand.length === 1) {
       const winner = playerHand.length === 1 ? 'computer' : playerName;
       onGameEnd(winner);
@@ -52,7 +52,7 @@ const Game: React.FC<GameProps> = ({ playerName, onGameEnd }) => {
   };
 
   if (attacker === 'computer') {
-    setTimeout(computerMove, 1000); // Simuliert eine kurze Verzögerung für den Zug des Computers
+    setTimeout(computerMove, 1000); 
   }
 
   return (

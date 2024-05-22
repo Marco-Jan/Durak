@@ -13,7 +13,7 @@ const App: React.FC = () => {
 
   const handleGameEnd = (winnerName: string) => {
     setHighScores([...highScores, winnerName]);
-    setPlayerName(null); // Reset to start screen after the game ends
+    setPlayerName(null); 
   };
 
   return (
@@ -24,9 +24,12 @@ const App: React.FC = () => {
       {playerName ? (
         <Game playerName={playerName} onGameEnd={handleGameEnd} />
       ) : (
+
         <StartScreen onStart={handleStart} highScores={highScores} />
       )}
     </div>
+
+    //end
   );
 };
 
